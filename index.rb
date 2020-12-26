@@ -1,16 +1,33 @@
 require "tty-prompt"
 prompt = TTY::Prompt.new
 
+def create_task
+  p "You want to add a new task."
+end
+
+def read_task
+  p "Feature coming soon!"
+end
+
+def update_task
+  p "Feature coming soon!"
+end
+
+def delete_task
+  p "Feature coming soon!"
+end
+
+###### MAIN MENU ######
 choices = {"View tasks": :read, "Add a task": :create, "Edit a task": :update, "Delete a task": :delete}
 choice = prompt.select("What would you like to do?", choices)
 
 case choice
 when :create
-  p "You want to add a new task."
+  create_task
 when :read
-  p "You want to see a list of your tasks."
+  read_task
 when :update
-  p "You want to edit a task"
+  update_task
 when :delete
-  p "You want to delete a task"
+  delete_task
 end
